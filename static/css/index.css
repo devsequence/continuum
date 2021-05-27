@@ -1208,7 +1208,16 @@ body.scroll {
 .news-item__media {
   position: relative;
   margin-bottom: 7px; }
+.news-item__media a{
+  width: 100%;
+  overflow: hidden;
+}
+.news-item__media a:hover img{
+  transform: scale(1.1);
+}
 .news-item__media img {
+  transition: all ease 300ms;
+  transform: scale(1);
   width: 100%; }
 
 .news-item__date {
@@ -1531,7 +1540,12 @@ body.scroll {
   .header-mobile .container {
     max-width: 250px; } }
 
+
 @media (min-width: 1200px) {
   .hero-slider .swiper-pagination {
     max-width: 1170px;
     bottom: 80px; } }
+@media (min-width: 1440px) {
+  .hero-slider .swiper-pagination {
+    max-width: 1320px;
+    bottom: 131px; } }
