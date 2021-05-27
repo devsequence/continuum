@@ -1499,7 +1499,7 @@ body.scroll {
     display: none; }
   .category-item {
     width: 100%; }
-  .category-item:last-child(2):before, .category-item:last-child(2):after {
+  .category-item:nth-last-child(2):before, .category-item:nth-last-child(2):after {
     position: absolute;
     content: '';
     bottom: 0;
