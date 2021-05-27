@@ -1,0 +1,387 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 16px;
+  line-height: 130%;
+  font-family: 'Montserrat' , Helvetica, Arial, sans-serif;
+  color: $default;
+  background-color: $white;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  overflow-x: hidden;
+
+}
+h3, h4, h5, h6{
+  font-family: $oswald;
+  margin-bottom: 25px;
+  font-weight: 900;
+}
+h1 {
+  font-family: $oswald;
+  font-size: 50px;
+  line-height: 50px;
+  color: $default;
+}
+strong{
+  font-family: $oswald;
+  font-weight: 900;
+}
+blockquote{
+  position: relative;
+  padding-left: 50px;
+  &:before{
+    position: absolute;
+    content: '';
+    left: 25px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: #dedede;
+  }
+}
+h2 {
+  font-family: $oswald;
+  font-size: 40px;
+  line-height: 40px;
+  color: $default;
+}
+
+h3 {
+  font-size: 25px;
+  line-height: 26px;
+  color: $default;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 25px;
+  color: $default;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 25px;
+  color: $default;
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 21px;
+  color: $default;
+}
+
+p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+img {
+  display: block;
+  //width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+}
+section {
+  position: relative;
+  padding: 40px 0;
+  z-index: 1;
+}
+
+.section {
+  position: relative;
+  padding: 100px 0;
+}
+
+.row.min {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.row.min > div[class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.overflow {
+  overflow: hidden !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+a,
+button,
+input,
+select,
+textarea,
+span,
+.icon {
+  transition: all 150ms ease;
+}
+button{
+  cursor: pointer;
+}
+.wysiwyg{
+  font-size: 16px;
+  line-height: 24px;
+  color: $black-100;
+  p{
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-100;
+    margin-bottom: 16px;
+  }
+}
+body.scroll{
+  overflow: hidden;
+}
+.btn{
+  width: 220px;
+  height: 54px;
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 35px;
+  span{
+    position: relative;
+    &:after{
+      position: absolute;
+      content: '';
+      right: -28px;
+      top: 0;
+      height: 100%;
+      width: 1px;
+
+    }
+  }
+}
+.btn-white{
+  color: $primary;
+  background: $white;
+  span{
+    &:after{
+      background: $primary;
+    }
+  }
+  .icon{
+    fill: $primary;
+  }
+  &:hover{
+    color: $white;
+    background: $primary;
+    span{
+      &:after{
+        background: $white;
+      }
+    }
+    .icon{
+      fill: $white;
+    }
+  }
+}
+.btn-primary{
+  color: $white;
+  background: $primary;
+  border: 1px solid $primary;
+  span{
+    &:after{
+      background: $white;
+    }
+  }
+  .icon{
+    fill: $white;
+  }
+  &:hover{
+    color: $primary;
+    background: $white;
+    border: 1px solid $primary;
+    span{
+      &:after{
+        background: $primary;
+      }
+    }
+    .icon{
+      fill: $primary;
+    }
+  }
+}
+.btn-plus{
+  .btn-text{
+    font-family: $oswald;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $black;
+    margin-right: 12px;
+  }
+  .btn-media{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $primary;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid $primary;
+  }
+  .icon{
+    width: 17px;
+    height: 17px;
+    fill: $white;
+  }
+  &:hover{
+    .btn-text{
+      color: $primary;
+    }
+    .btn-media{
+      background: transparent;
+    }
+    .icon{
+      fill: $primary;
+    }
+  }
+}
+.consultation-form{
+  background-image: url("../images/general/pattern-form.png") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100px;
+  padding: 35px 20px 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__title{
+    font-family: $oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-right: 40px;
+  }
+  form{
+    display: flex;
+  }
+  .input{
+    width: 220px;
+    height: 54px;
+    background: rgba($white, .4);
+    border-radius: 54px;
+    border: 0;
+    outline: none;
+    margin-right: 12px;
+    padding: 0 30px;
+    font-family: $oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    color: $white;
+    &::-webkit-input-placeholder {
+      color: $white;
+      opacity: 1;
+    }
+    &::-moz-placeholder {
+      color: $white;
+      opacity: 1;
+    }
+    &:-moz-placeholder {
+      color: $white;
+      opacity: 1;
+    }
+    &::-ms-input-placeholder {
+      color: $white;
+      opacity: 1;
+    }
+    &:-ms-input-placeholder {
+      color: $white;
+      opacity: 1;
+    }
+  }
+  .btn-white{
+    padding: 0;
+    justify-content: center;
+    border: 2px solid $white;
+    &:hover{
+      border-color: $white;
+    }
+  }
+}
+.title-section{
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: $black;
+  position: relative;
+  &:before{
+   position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    margin-top: 1px;
+    background: $primary;
+    z-index: 1;
+  }
+  &__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+ .icon{
+   width: 50px;
+   height: 50px;
+   margin: 7px 36px 0 9px;
+
+ }
+}
+.scroll-h{
+  overflow: hidden;
+}
+

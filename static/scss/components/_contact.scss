@@ -1,0 +1,266 @@
+.contact-top{
+  &:after{
+    height: 85%;
+  }
+  .top-section__header{
+    margin-bottom: 100px;
+  }
+  .contact-title{
+    font-family: $noahHeavy;
+    font-weight: 900;
+    color: $primary;
+    font-size: 30px;
+    line-height: 42px;
+    max-width: 750px;
+    margin-right: 140px;
+  }
+  .contact-form{
+    padding-top: 36px;
+    form{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+  }
+
+  .select-label, .label{
+    width: calc(100% - 30px);
+    margin: 0 15px 24px;
+  }
+  .select-label{
+    margin-bottom: 22px;
+  }
+  .input-label{
+    width: calc(50% - 30px);
+    margin: 0 15px 24px;
+    display: block;
+  }
+  .input, select{
+    font-family: $noahLight;
+    color: $default;
+    font-size: 18px;
+    line-height: 20px;
+    background: transparent;
+    width: 100%;
+    height: 65px;
+    border-radius: 0;
+    border: 0;
+    outline: none;
+    border-bottom: 2px solid $default;
+    &:focus, &:hover{
+      border-color: $primary;
+    }
+  }
+  .file-upload{
+    width: calc(100% - 30px);
+    margin: 20px 15px 55px;
+    .label-file{
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+    }
+  }
+  .file-upload__link{
+    height: 71px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px dashed $default;
+
+  }
+  .file-upload__title{
+    font-family: $noahLight;
+    color: #909090;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .file-upload__count{
+    font-family: $noahLight;
+    color: #909090;
+    font-size: 13px;
+    line-height: 13px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    span{
+      font-family: inherit;
+      color: #909090;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+  .btn-submit{
+    border: 1px solid $primary;
+    background: $primary;
+    padding: 18px 59px;
+    margin: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    color: $white;
+    &:hover{
+      color: $primary;
+      background: transparent;
+      .icon{
+        fill: $primary;
+      }
+    }
+  }
+  span{
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: $akrobatBold;
+    font-weight: 700;
+  }
+  .icon{
+    fill: $white;
+    width: 20px;
+    margin-right: 20px;
+  }
+}
+.contact-wrapper{
+  padding: 200px 0 0;
+  .contact-wrap{
+    display: flex;
+  }
+  .contact-item{
+    width: calc(25% - 30px);
+    margin: 0 15px;
+    &:nth-of-type(1){
+      width: calc(50% - 30px);
+    }
+    a{
+      display: block;
+      color: $default;
+      font-size: 20px;
+      line-height: 20px;
+      font-family: $noahBold;
+      font-weight: 700;
+      margin-bottom: 21px;
+      &:hover{
+        color: $primary;
+      }
+    }
+    .mail-link{
+      font-family: $noahRegular;
+      font-weight: 400;
+    }
+    .viber-btn{
+      display: inline-block;
+      margin-right: 10px;
+      &:hover{
+        .icon{
+          fill: $primary;
+        }
+      }
+    }
+    .phone-link{
+      display: inline-block;
+      position: relative;
+      padding-bottom: 16px;
+      font-size: 22px;
+      font-family: $noahHeavy;
+      sub{
+        font-size: 14px;
+        font-family: $noahLight;
+        font-weight: 300;
+        color: #909090;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    .contact-location{
+      margin-bottom: 15px;
+    }
+  }
+  .contact-text{
+    font-family: $noahRegular;
+    font-weight: 400;
+    color: $default;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .contact-title{
+    text-transform: uppercase;
+    font-family: $akrobatExtraBold;
+    font-weight: 900;
+    color: $default;
+    font-size: 30px;
+    line-height: 50px;
+    margin-bottom: 22px;
+  }
+  .map-wrap{
+    margin-top: 120px;
+    width: 100%;
+    height: 500px;
+    padding-left: 75px;
+    overflow: hidden;
+    iframe{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+@media screen and (max-width: 1025px) {
+  .contact-wrapper {
+    padding: 100px 0 0;
+    .contact-wrap{
+      flex-wrap: wrap;
+    }
+    .contact-item{
+      width: calc(50% - 30px);
+      margin: 0 15px 30px;
+    }
+    .map-wrap{
+      margin-top: 20px;
+      height: 400px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .contact-top {
+    .top-section__header{
+      margin-bottom: 40px;
+    }
+    .contact-form{
+      padding-top: 20px;
+    }
+    .input-label{
+      width: calc(100% - 30px);
+      margin: 0 15px 15px;}
+    .file-upload{
+      margin: 15px 15px 20px;
+    }
+    .input,  select{
+      height: 45px;
+    }
+  }
+  .contact-wrapper {
+    padding: 80px 0 0;
+    .contact-item{
+      &:nth-of-type(1){
+        width: 100%;
+        margin: 0 0 30px;
+      }
+      width: 100%;
+      margin: 0 0 20px;
+      a{
+        margin-bottom: 15px;
+      }
+    }
+    .contact-title {
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 18px;
+    }
+  }
+
+
+}
