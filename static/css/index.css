@@ -1500,6 +1500,7 @@ body.scroll {
   .category-item {
     width: 100%; }
   .category-item:nth-last-child(2):before, .category-item:nth-last-child(2):after {
+    display: block;
     position: absolute;
     content: '';
     bottom: 0;
