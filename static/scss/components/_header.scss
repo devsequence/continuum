@@ -170,7 +170,6 @@
     }
   }
   &-bottom{
-    padding: 18px 0 15px;
     background: $primary-100;
     ul{
       justify-content: center;
@@ -190,6 +189,41 @@
       line-height: 27px;
       text-transform: uppercase;
       color: $white;
+      padding: 18px 0 15px;
+    }
+    .has-sub{
+      position: relative;
+      &:hover{
+        ul{
+          top: 100%;
+          opacity: 1;
+          z-index: 1;
+          visibility: visible;
+        }
+      }
+      ul{
+        position: absolute;
+        width: 100%;
+        min-width: 220px;
+        transition: all ease 300ms;
+        left: 0;
+        padding-top: 10px;
+        flex-direction: column;
+        background: $primary;
+        top: 80%;
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        a{
+          padding: 0;
+        }
+      }
+      li{
+        margin-bottom: 20px;
+        margin-right: 0;
+        padding: 0 15px;
+      }
+
     }
   }
 }
@@ -204,6 +238,12 @@
   height: 100%;
   ul{
     margin-bottom: 20px;
+    li{
+      ul{
+        padding-left: 10px;
+        margin-bottom: 0;
+      }
+    }
   }
   &.open{
     opacity: 1;

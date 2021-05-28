@@ -323,6 +323,17 @@
     margin-bottom: 7px;
     img{
       width: 100%;
+      transition: all ease 300ms;
+      transform: scale(1);
+    }
+    a{
+      overflow: hidden;
+      width: 100%;
+      &:hover{
+        img{
+          transform: scale(1.1);
+        }
+      }
     }
   }
   &-item__date{
